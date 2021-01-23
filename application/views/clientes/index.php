@@ -157,7 +157,7 @@ const clients ={
             contentType: 'application/json',
             success: function (data, status, xhr) {
                 if (xhr.status == 204) {
-                    alert("Se habilito correctamente el usuario.");
+                    alert("Se deshabilito correctamente el usuario.");
                 } else {
                     alert("Ocurrio un problema al deshabilito el usuario, intentelo mas tarde.")
                 }
