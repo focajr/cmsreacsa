@@ -1,0 +1,11 @@
+﻿<IfModule mod_rewrite.c>
+
+    Options +FollowSymLinks -Indexes
+    RewriteEngine on
+    RedirectMatch 403 ^/(system).*$
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !^(index\.php|assets|bower_components|css|js|fonts|images|robots\.txt)
+    RewriteRule ^(.*)$ /reacsa_cms/index.php/$1 [L,QSA]
+</IfModule>
