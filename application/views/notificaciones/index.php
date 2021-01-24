@@ -91,6 +91,7 @@ let getDataTable=()=>{
             trs+="<td>"+row.fecha+"</td>";
             trs+="<td>"+row.descripcion+"</td>";
             trs+="<td><div class='btn-group'>";
+                console.log(row.status);
                 if(row.status==1){
                     trs+="<button  title='Deshabilitar' type='button' class='btn btn-danger btn-xs' onclick='notificaciones.disable(\""+row.uuid_cliente+"\")'><i class='fas fa-times' aria-hidden='true'></i></button>"
                 }else{
